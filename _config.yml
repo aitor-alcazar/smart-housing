@@ -1,0 +1,8 @@
+title: Smart Housing
+description: MVP frontend served with Jekyll for GitHub Pages
+baseurl: "/smart-housing"
+url: "https://aitor-alcazar.github.io"
+permalink: /:path/
+
+markdown: kramdown
+theme: minima
