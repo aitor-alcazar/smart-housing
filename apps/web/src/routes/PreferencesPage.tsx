@@ -1,0 +1,3 @@
+import { useState } from "react";import { store } from "../lib/storage";
+const defaults={max_price:350000,max_monthly_payment:1000,min_surface_m2:75,min_rooms:3,min_bathrooms:1};
+export default function(){const [v,setV]=useState(store.get("prefs",defaults));return <div className='card space-y-2'><h2 className='font-semibold'>Preferences</h2>{Object.keys(defaults).map(k=><input key={k} className='border p-2 w-full' value={(v as any)[k]} onChange={e=>setV({...v,[k]:Number(e.target.value)})}/>) }<button className='px-3 py-2 bg-slate-900 text-white rounded' onClick={()=>store.set("prefs",v)}>Save</button></div>}

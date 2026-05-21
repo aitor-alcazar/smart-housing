@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Node
+node_modules/
+dist/
+
+# Env / local
+.env
+.DS_Store

@@ -1,0 +1,3 @@
+import { Link, Route, Routes } from "react-router-dom";
+import DashboardPage from "./routes/DashboardPage";import PreferencesPage from "./routes/PreferencesPage";import EvaluatePage from "./routes/EvaluatePage";import EvaluationReportPage from "./routes/EvaluationReportPage";
+export default function App(){return <div className='max-w-6xl mx-auto p-4 space-y-4'><nav className='card flex gap-4'><Link to='/'>Dashboard</Link><Link to='/preferences'>Preferences</Link><Link to='/evaluate'>Evaluate</Link></nav><Routes><Route path='/' element={<DashboardPage/>}/><Route path='/preferences' element={<PreferencesPage/>}/><Route path='/evaluate' element={<EvaluatePage/>}/><Route path='/evaluations/:id' element={<EvaluationReportPage/>}/></Routes></div>}
